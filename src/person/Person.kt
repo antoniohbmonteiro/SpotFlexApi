@@ -1,9 +1,6 @@
 package br.com.antoniomonteiro.person
 
-import com.google.gson.annotations.SerializedName
-import org.jetbrains.exposed.dao.*
-import org.jetbrains.exposed.sql.Column
-import org.jetbrains.exposed.sql.DecimalColumnType
+import org.jetbrains.exposed.dao.LongIdTable
 import org.jetbrains.exposed.sql.ResultRow
 import java.math.BigDecimal
 
