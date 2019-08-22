@@ -22,6 +22,9 @@ fun Application.module(testing: Boolean = false) {
     }
     install(Routing) {
         person()
+
+
+
     }
 
     routing {
