@@ -29,6 +29,7 @@ fun Application.module(testing: Boolean = false) {
 
 
         var a = 1
+        var b = a + 1
     }
 
     routing {
