@@ -28,7 +28,7 @@ fun Application.module(testing: Boolean = false) {
 
 
 
-
+        var a = 1
     }
 
     routing {
