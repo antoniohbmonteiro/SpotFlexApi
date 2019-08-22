@@ -9,6 +9,7 @@ import io.ktor.http.*
 import io.ktor.gson.*
 import io.ktor.features.*
 import org.jetbrains.exposed.sql.Database
+import java.time.LocalDateTime
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -22,23 +23,10 @@ fun Application.module(testing: Boolean = false) {
     }
     install(Routing) {
         person()
-
-
-
-
-
-
-        var a = 1
-        var b = a + 1
     }
 
     routing {
         get("/") {
-            Database.connect(
-                "jdbc:mysql://localhost:3306/spotflex_api", driver = "com.mysql.jdbc.Driver",
-                user = "root", password = "Ahbm101292*"
-            )
-
             call.respondText("HELLO WORLD!", contentType = ContentType.Text.Plain)
         }
 
