@@ -1,4 +1,4 @@
-package br.com.antoniomonteiro.person
+package br.com.antoniomonteiro.services.person
 
 import org.jetbrains.exposed.dao.LongIdTable
 import org.jetbrains.exposed.sql.ResultRow
@@ -11,13 +11,13 @@ data class Person(
 )
 
 internal object PersonTable : LongIdTable() {
+    val name = varchar("name", 50)
+    val credit = decimal("credit", precision = 38, scale = 2)
+
     fun toModel(row: ResultRow): Person =
         Person(
             id = row[id].value,
             name = row[name],
             credit = row[credit]
         )
-
-    val name = varchar("name", 50)
-    val credit = decimal("credit", precision = 38, scale = 2)
 }

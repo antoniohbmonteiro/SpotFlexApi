@@ -1,4 +1,4 @@
-package br.com.antoniomonteiro.person
+package br.com.antoniomonteiro.services.person
 
 import br.com.antoniomonteiro.SpotFlexDatabase
 import org.jetbrains.exposed.sql.*

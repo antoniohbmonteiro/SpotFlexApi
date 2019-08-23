@@ -1,15 +1,15 @@
 package br.com.antoniomonteiro
 
-import br.com.antoniomonteiro.person.person
+import br.com.antoniomonteiro.services.category.category
+import br.com.antoniomonteiro.services.genre.genre
+import br.com.antoniomonteiro.services.person.person
+import br.com.antoniomonteiro.services.product.product
 import io.ktor.application.*
 import io.ktor.response.*
-import io.ktor.request.*
 import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.gson.*
 import io.ktor.features.*
-import org.jetbrains.exposed.sql.Database
-import java.time.LocalDateTime
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -23,6 +23,9 @@ fun Application.module(testing: Boolean = false) {
     }
     install(Routing) {
         person()
+        product()
+        category()
+        genre()
     }
 
     routing {
