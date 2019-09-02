@@ -18,6 +18,8 @@ internal object RentTable : LongIdTable() {
     val status = enumeration("rent_status", RentStatus::class)
 }
 
-enum class RentStatus {
-
+enum class RentStatus(val value: Int) {
+    RENTED(0),
+    RETURNED(1),
+    LATE(2)
 }
